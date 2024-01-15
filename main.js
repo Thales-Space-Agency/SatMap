@@ -70,7 +70,7 @@ function animate() {
 }
 
 function getAllSatellites() {
-    fetch(`${process.env.API_URL}/api/get-sat`)
+    fetch(`/api/get-sat`)
         .then(response => response.json())
         .then(data => {
             satellites = data;
@@ -81,7 +81,7 @@ function getAllSatellites() {
 
 
 function updateSatellites() {
-    fetch(`${process.env.API_URL}/api/update-sat`, { method: 'POST' })
+    fetch(`/api/update-sat`, { method: 'POST' })
         .then(response => response.text())
         .then(data => console.log(data))
         .catch(error => console.error(error));
