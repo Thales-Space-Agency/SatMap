@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SatMap - Théo Vilain</title>
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        height: 100vh;
+      }
+
+      #panel {
+        width: 20%;
+        max-width: 20%;
+        height: 100vh;
+      }
+
+      #visualization {
+        width: 80%;
+        max-width: 80%;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="panel">
+    </div>
+    <div id="visualization">
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/satellite.js/4.0.0/satellite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/suncalc/1.9.0/suncalc.min.js" integrity="sha512-F6rjAEKNMtM0aODcc/MdnAvhGxn7FCbAkKJ5FKba/fnD3gnN+LBEok326WAMdOhKQKYNr+j/tJEuV1PKwIfhCA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="/main.js" defer></script>
+  </body>
+</html>
