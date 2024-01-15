@@ -23,8 +23,6 @@
     ],
     "env": {
       "NODE_ENV": "production"
-    },
-    "functions": { "api": { "handler": "server.js" } },
-    "start": "node server.js"
+    }
   }
   
