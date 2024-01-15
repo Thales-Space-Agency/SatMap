@@ -8,7 +8,6 @@
     "start": "node server.js"
   },
   "devDependencies": {
-    "concurrently": "^8.2.2",
     "vite": "^5.0.8"
   },
   "dependencies": {

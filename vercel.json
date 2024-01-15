@@ -3,10 +3,11 @@
     "builds": [
       {
         "src": "package.json",
-        "use": "@vercel/node",
-        "config": {
-          "includeFiles": ["dist/**"]
-        }
+        "use": "@vercel/node"
+      },
+      {
+        "src": "dist/**",
+        "use": "@vercel/static"
       }
     ],
     "routes": [
@@ -16,8 +17,14 @@
       },
       {
         "src": "/(.*)",
-        "dest": "/dist/index.html"
+        "dest": "/dist/$1",
+        "continue": true
       }
-    ]
-}
+    ],
+    "env": {
+      "NODE_ENV": "production"
+    },
+    "functions": { "api": { "handler": "server.js" } },
+    "start": "node server.js"
+  }
   
