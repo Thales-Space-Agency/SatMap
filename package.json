@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "build": "npx vite",
+    "build": "npx vite build",
     "start": "node server.js"
   },
   "devDependencies": {
