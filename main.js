@@ -70,7 +70,7 @@ function animate() {
 }
 
 function getAllSatellites() {
-    fetch('http://192.168.1.148:3001/api/get-sat')
+    fetch(`${process.env.API_URL}/api/get-sat`)
         .then(response => response.json())
         .then(data => {
             satellites = data;
@@ -81,7 +81,7 @@ function getAllSatellites() {
 
 
 function updateSatellites() {
-    fetch('http://192.168.1.148:3001/api/update-sat', { method: 'POST' })
+    fetch(`${process.env.API_URL}/api/update-sat`, { method: 'POST' })
         .then(response => response.text())
         .then(data => console.log(data))
         .catch(error => console.error(error));
